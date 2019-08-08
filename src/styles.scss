@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-size: 1.6rem;
+    //background-color: rgb(43, 196, 43);
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    width: 100%
+}
+
+// .heroes {
+//     background-color: green;
+//     min-width: 10rem;
+//     flex-basis: 100%;
+// }
+
