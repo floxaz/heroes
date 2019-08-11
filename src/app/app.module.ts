@@ -5,11 +5,14 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { CreateComponent } from './create/create.component';
 
+import { SelectDirective } from './shared/select.directive';
+
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    CreateComponent
+    CreateComponent,
+    SelectDirective
   ],
   imports: [
     BrowserModule

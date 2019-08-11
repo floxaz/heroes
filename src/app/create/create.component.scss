@@ -1,4 +1,100 @@
 :host {
     background-color: #fff;
     flex: 0 1 40rem;
+    position: relative;
+}
+
+.create {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-family: 'Blinker', sans-serif;
+
+    & > *:not(button){
+        width: 30rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &>:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &__input {
+        background-color: #e5ede4;
+        border: none;
+        color: #333;
+        font-family: inherit;
+        font-size: 1.6rem;
+        letter-spacing: .1rem;
+        outline: none;
+        height: 6rem;
+        padding: 2rem 2rem;
+    }
+
+    &__input::placeholder {
+        color: #789e72
+    }
+
+    &__button {
+        background-color: rgb(43, 196, 43);
+        border: none;
+        border-radius: 100px;
+        color: #fff;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 2rem;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        width: 20rem;
+        padding: 1rem 2rem;
+        transition: all .4s ease;
+    }
+
+    &__input,
+    &__button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__button:hover {
+        transform: scale(1.05);
+    }
+}
+
+.color {
+    display: flex;
+    background-color: #e5ede4;
+    justify-content: space-around;
+    align-items: center;
+    height: 6rem;
+
+    &__choice {
+        cursor: pointer;
+        width: 5rem;
+        height: 5rem;
+        transition: .2s ease-in;
+    }
+
+    &__choice:hover {
+        outline: .5rem solid rgb(43, 196, 43);
+    }
+
+    &__choice--1 { background-color: #eb4d4b; }
+
+    &__choice--2 { background-color: #f9ca24; }
+
+    &__choice--3 { background-color: #30336b; }
+
+    &__choice--4 { background-color: #7ed6df; }
+
+    &__choice--5 { background-color: #4b4b4b; }
+
+}
+
+.outlined {
+    outline: .5rem solid rgb(43, 196, 43);
 }
