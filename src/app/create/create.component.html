@@ -1,11 +1,12 @@
+<app-preview [name]="name" [color]="color"></app-preview>
 <div class="create">
-    <input type="text" class="create__input" placeholder="Name">
-    <div class="color" appSelect [elClass]="'color__choice'" [toggleClass]="'outlined'">
-        <div class="color__choice color__choice--1"></div>
-        <div class="color__choice color__choice--2"></div>
-        <div class="color__choice color__choice--3"></div>
-        <div class="color__choice color__choice--4"></div>
-        <div class="color__choice color__choice--5"></div>
+    <input type="text" [(ngModel)]="name" class="create__input" placeholder="Name" maxlength="20">
+    <div class="color" appSelect [elClass]="'color__choice'" [toggleClass]="'outlined'" (click)="onColorClick($event)">
+        <div class="color__choice" [style.background-color]="'#eb4d4b'"></div>
+        <div class="color__choice" [style.background-color]="'#f9ca24'"></div>
+        <div class="color__choice" [style.background-color]="'#30336b'"></div>
+        <div class="color__choice" [style.background-color]="'#7ed6df'"></div>
+        <div class="color__choice" [style.background-color]="'#4b4b4b'"></div>
     </div>
     <button class="create__button">Create</button>
 </div>

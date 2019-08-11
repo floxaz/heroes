@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { CreateComponent } from './create/create.component';
+import { PreviewComponent } from './create/preview/preview.component';
 
 import { SelectDirective } from './shared/select.directive';
 
@@ -12,10 +14,12 @@ import { SelectDirective } from './shared/select.directive';
     AppComponent,
     HeroesComponent,
     CreateComponent,
+    PreviewComponent,
     SelectDirective
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

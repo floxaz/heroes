@@ -1,15 +1,13 @@
 :host {
     background-color: #fff;
     flex: 0 1 40rem;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .create {
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
     font-family: 'Blinker', sans-serif;
 
     & > *:not(button){
@@ -49,6 +47,7 @@
         letter-spacing: .1rem;
         text-transform: uppercase;
         width: 20rem;
+        outline: none;
         padding: 1rem 2rem;
         transition: all .4s ease;
     }
@@ -80,21 +79,10 @@
     }
 
     &__choice:hover {
-        outline: .5rem solid rgb(43, 196, 43);
+        outline: .5rem solid #789e72
     }
-
-    &__choice--1 { background-color: #eb4d4b; }
-
-    &__choice--2 { background-color: #f9ca24; }
-
-    &__choice--3 { background-color: #30336b; }
-
-    &__choice--4 { background-color: #7ed6df; }
-
-    &__choice--5 { background-color: #4b4b4b; }
-
 }
 
 .outlined {
-    outline: .5rem solid rgb(43, 196, 43);
+    outline: .5rem solid #789e72
 }

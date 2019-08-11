@@ -1,0 +1,42 @@
+:host {
+    margin-bottom: 6rem;
+}
+
+.preview {
+    width: 30rem;
+    margin: 0 auto;
+
+    &__hero > * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__name {
+        border: .2rem solid #e5ede4;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+        height: 4rem;
+        line-height: 4rem;
+        text-align: center;
+        text-transform: uppercase;
+        width: 20rem;
+
+        &--hasName {
+            border: .2rem solid rgb(43, 196, 43);
+        }
+    }
+
+    &__head {
+        background-color: #e5ede4;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+    }
+
+    &__body {
+        height: 8rem;
+        width: 6rem;
+        background-color: #e5ede4;
+        border-radius: 5rem;
+    }
+}
