@@ -8,6 +8,15 @@ import { Component } from '@angular/core';
 export class CreateComponent {
     name: string;
     color: string;
+    headId: string;
+
+    onHeadClick(e) {
+        if (e.target.classList.contains('head__choice')) {
+            const headClass = e.target.classList.item(1);
+            this.headId = headClass.split('--')[1];
+        }
+    }
+
     onColorClick(e) {
         if(e.target.classList.contains('color__choice')) {
             this.color = e.target.style.backgroundColor;

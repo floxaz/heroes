@@ -22,14 +22,22 @@
         width: 20rem;
 
         &--hasName {
-            border: .2rem solid rgb(43, 196, 43);
+            border: .2rem solid #789e72;
         }
     }
 
     &__head {
+        display: block;
+        fill: #e5ede4;
+        width: 5rem;
+        height: 5rem;
+        margin: 0 auto;
+    }
+
+    &__no-head {
         background-color: #e5ede4;
-        height: 4rem;
-        width: 4rem;
+        height: 5rem;
+        width: 5rem;
         border-radius: 50%;
     }
 

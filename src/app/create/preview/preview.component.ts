@@ -8,4 +8,5 @@ import { Component, Input } from '@angular/core';
 export class PreviewComponent {
     @Input('name') name: string;
     @Input ('color') color: string;
+    @Input('headId') headId: string;
 }

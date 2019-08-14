@@ -1,30 +1,35 @@
-<app-preview [name]="name" [color]="color"></app-preview>
+<app-preview 
+    [name]="name" 
+    [color]="color"
+    [headId]="headId"
+>
+</app-preview>
 <div class="create">
     <input type="text" [(ngModel)]="name" class="create__input" placeholder="Name" maxlength="20">
-    <div class="head" appSelect [elClass]="'head__choice'" [toggleClass]="'outlined'">
-        <div class="head__choice">
+    <div class="head" appSelect [elClass]="'head__choice'" [toggleClass]="'outlined'" (click)="onHeadClick($event)">
+        <div class="head__choice head__choice--1">
             <svg class="head__shape head__shape--1">
-                <use href="/assets/images/sprite.svg#head-spartan"></use>
+                <use href="/assets/images/sprite.svg#head--1"></use>
             </svg>
         </div>
-        <div class="head__choice">
+        <div class="head__choice head__choice--2">
             <svg class="head__shape head__shape--2">
-                <use href="/assets/images/sprite.svg#head-hallo"></use>
+                <use href="/assets/images/sprite.svg#head--2"></use>
             </svg>
         </div>
-        <div class="head__choice">
+        <div class="head__choice head__choice--3">
             <svg class="head__shape head__shape--3">
-                <use href="/assets/images/sprite.svg#head-deadpool"></use>
+                <use href="/assets/images/sprite.svg#head--3"></use>
             </svg>
         </div>
-        <div class="head__choice">
+        <div class="head__choice head__choice--4">
             <svg class="head__shape head__shape--4">
-                <use href="/assets/images/sprite.svg#head-black-panther"></use>
+                <use href="/assets/images/sprite.svg#head--4"></use>
             </svg>
         </div>
-        <div class="head__choice">
+        <div class="head__choice head__choice--5">
             <svg class="head__shape head__shape--5">
-                <use href="/assets/images/sprite.svg#head-robocop"></use>
+                <use href="/assets/images/sprite.svg#head--5"></use>
             </svg>
         </div>
     </div>
@@ -35,5 +40,5 @@
         <div class="color__choice" [style.background-color]="'#7ed6df'"></div>
         <div class="color__choice" [style.background-color]="'#4b4b4b'"></div>
     </div>
-    <button class="create__button" [disabled]="!name || !color">Create</button>
+    <button class="create__button" [disabled]="!name || !color || !headId">Create</button>
 </div>

@@ -1,7 +1,12 @@
 <div class="preview">
     <div class="preview__hero">
         <div class="preview__name" [ngClass]="{'preview__name--hasName': name}">{{ name }}</div>
-        <div class="preview__head" [style.background-color]="color"></div>
+        <svg class="preview__head" [style.fill]="color" *ngIf="headId; else noHeadId">
+            <use [attr.href]="'/assets/images/sprite.svg#head--' + headId"></use>
+        </svg>
+        <ng-template #noHeadId>
+            <div class="preview__no-head" [style.background-color]="color"></div>
+        </ng-template>
         <div class="preview__body" [style.background-color]="color"></div>
     </div>
 </div>
