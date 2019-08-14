@@ -15,12 +15,13 @@ export class SelectDirective implements OnInit {
 
     ngOnInit() {
         this.renderer.listen(this.elRef.nativeElement, 'click', e => {
-            if(e.target.classList.contains(this.elClass)) {
-                const list = Array.from(e.target.parentElement.children);
+            const el = e.target;
+            if(el.classList.contains(this.elClass)) {
+                const list = Array.from(el.parentElement.children);
                 list.forEach(child => {
                     this.renderer.removeClass(child, this.toggleClass);
                 })
-                this.renderer.addClass(e.target, this.toggleClass);
+                this.renderer.addClass(el, this.toggleClass);
             }
         });
     }

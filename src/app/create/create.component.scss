@@ -52,6 +52,15 @@
         transition: all .4s ease;
     }
 
+    &__button:disabled {
+        background-color: #e5ede4;
+    }
+
+    &__button:disabled:hover {
+        cursor: default;
+        transform: scale(1);
+    }
+
     &__input,
     &__button {
         display: block;
@@ -64,7 +73,8 @@
     }
 }
 
-.color {
+.color,
+.head {
     display: flex;
     background-color: #e5ede4;
     justify-content: space-around;
@@ -79,7 +89,14 @@
     }
 
     &__choice:hover {
-        outline: .5rem solid #789e72
+        outline: .5rem solid #789e72;
+    }
+
+    &__shape {
+        width: 5rem;
+        height: 5rem;
+        fill: #789e72;
+        pointer-events: none;
     }
 }
 

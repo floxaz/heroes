@@ -1,6 +1,33 @@
 <app-preview [name]="name" [color]="color"></app-preview>
 <div class="create">
     <input type="text" [(ngModel)]="name" class="create__input" placeholder="Name" maxlength="20">
+    <div class="head" appSelect [elClass]="'head__choice'" [toggleClass]="'outlined'">
+        <div class="head__choice">
+            <svg class="head__shape head__shape--1">
+                <use href="/assets/images/sprite.svg#head-spartan"></use>
+            </svg>
+        </div>
+        <div class="head__choice">
+            <svg class="head__shape head__shape--2">
+                <use href="/assets/images/sprite.svg#head-hallo"></use>
+            </svg>
+        </div>
+        <div class="head__choice">
+            <svg class="head__shape head__shape--3">
+                <use href="/assets/images/sprite.svg#head-deadpool"></use>
+            </svg>
+        </div>
+        <div class="head__choice">
+            <svg class="head__shape head__shape--4">
+                <use href="/assets/images/sprite.svg#head-black-panther"></use>
+            </svg>
+        </div>
+        <div class="head__choice">
+            <svg class="head__shape head__shape--5">
+                <use href="/assets/images/sprite.svg#head-robocop"></use>
+            </svg>
+        </div>
+    </div>
     <div class="color" appSelect [elClass]="'color__choice'" [toggleClass]="'outlined'" (click)="onColorClick($event)">
         <div class="color__choice" [style.background-color]="'#eb4d4b'"></div>
         <div class="color__choice" [style.background-color]="'#f9ca24'"></div>
@@ -8,5 +35,5 @@
         <div class="color__choice" [style.background-color]="'#7ed6df'"></div>
         <div class="color__choice" [style.background-color]="'#4b4b4b'"></div>
     </div>
-    <button class="create__button">Create</button>
+    <button class="create__button" [disabled]="!name || !color">Create</button>
 </div>
