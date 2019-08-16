@@ -1,0 +1,19 @@
+:host {
+    //background-color: #2f3640;
+    background-color: #55efc4;
+    color: #789e72;
+    font-size: 1.2rem;
+    flex-basis: 10rem;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+
+a:hover {
+    color: #2f3640;
+}

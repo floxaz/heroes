@@ -22,7 +22,6 @@ export class CreateComponent {
         if(e.target.classList.contains('body__choice')) {
             const bodyClass = e.target.classList.item(1);
             this.bodyId = bodyClass.split('--')[1];
-            console.log(this.bodyId);
         }
     }
 
