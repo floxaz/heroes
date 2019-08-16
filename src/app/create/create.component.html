@@ -70,5 +70,11 @@
         <div class="color__choice" [style.background-color]="'#7ed6df'"></div>
         <div class="color__choice" [style.background-color]="'#4b4b4b'"></div>
     </div>
-    <button class="create__button" [disabled]="!name || !color || !headId || !bodyId">Create</button>
+    <button 
+    class="create__button" 
+    [disabled]="!name || !color || !headId || !bodyId"
+    (click)="onCreateClick()"
+    >
+    Create
+    </button>
 </div>

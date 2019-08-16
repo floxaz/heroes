@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HeroesService } from '../heroes/heroes.service';
 
 @Component({
     selector: 'app-create',
@@ -10,6 +11,8 @@ export class CreateComponent {
     color: string;
     headId: string;
     bodyId: string;
+
+    constructor(private heroesService: HeroesService) {}
 
     onHeadClick(e) {
         if (e.target.classList.contains('head__choice')) {
@@ -29,5 +32,9 @@ export class CreateComponent {
         if(e.target.classList.contains('color__choice')) {
             this.color = e.target.style.backgroundColor;
         }
+    }
+
+    onCreateClick() {
+        this.heroesService.addNewHero(this.name, this.color, this.headId, this.bodyId);
     }
 }
