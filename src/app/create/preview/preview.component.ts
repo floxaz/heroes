@@ -6,7 +6,8 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./preview.component.scss']
 })
 export class PreviewComponent {
-    @Input('name') name: string;
-    @Input ('color') color: string;
-    @Input('headId') headId: string;
+    @Input() name: string;
+    @Input() color: string;
+    @Input() headId: string;
+    @Input() bodyId: string;
 }
