@@ -8,31 +8,60 @@
     <input type="text" [(ngModel)]="name" class="create__input" placeholder="Name" maxlength="20">
     <div class="head" appSelect [elClass]="'head__choice'" [toggleClass]="'outlined'" (click)="onHeadClick($event)">
         <div class="head__choice head__choice--1">
-            <svg class="head__shape head__shape--1">
+            <svg class="head__shape">
                 <use href="/assets/images/sprite.svg#head--1"></use>
             </svg>
         </div>
         <div class="head__choice head__choice--2">
-            <svg class="head__shape head__shape--2">
+            <svg class="head__shape">
                 <use href="/assets/images/sprite.svg#head--2"></use>
             </svg>
         </div>
         <div class="head__choice head__choice--3">
-            <svg class="head__shape head__shape--3">
+            <svg class="head__shape">
                 <use href="/assets/images/sprite.svg#head--3"></use>
             </svg>
         </div>
         <div class="head__choice head__choice--4">
-            <svg class="head__shape head__shape--4">
+            <svg class="head__shape">
                 <use href="/assets/images/sprite.svg#head--4"></use>
             </svg>
         </div>
         <div class="head__choice head__choice--5">
-            <svg class="head__shape head__shape--5">
+            <svg class="head__shape">
                 <use href="/assets/images/sprite.svg#head--5"></use>
             </svg>
         </div>
     </div>
+
+    <div class="body" appSelect [elClass]="'body__choice'" [toggleClass]="'outlined'">
+        <div class="body__choice body__choice--1">
+            <svg class="body__shape">
+                <use href="/assets/images/sprite.svg#body--1"></use>
+            </svg>
+        </div>
+        <div class="body__choice body__choice--2">
+            <svg class="body__shape">
+                <use href="/assets/images/sprite.svg#body--2"></use>
+            </svg>
+        </div>
+        <div class="body__choice body__choice--3">
+            <svg class="body__shape">
+                <use href="/assets/images/sprite.svg#body--3"></use>
+            </svg>
+        </div>
+        <div class="body__choice body__choice--4">
+            <svg class="body__shape">
+                <use href="/assets/images/sprite.svg#body--4"></use>
+            </svg>
+        </div>
+        <div class="body__choice body__choice--5">
+            <svg class="body__shape">
+                <use href="/assets/images/sprite.svg#body--5"></use>
+            </svg>
+        </div>
+    </div>
+    
     <div class="color" appSelect [elClass]="'color__choice'" [toggleClass]="'outlined'" (click)="onColorClick($event)">
         <div class="color__choice" [style.background-color]="'#eb4d4b'"></div>
         <div class="color__choice" [style.background-color]="'#f9ca24'"></div>
