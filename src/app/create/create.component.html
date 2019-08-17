@@ -6,8 +6,8 @@
 >
 </app-preview>
 <div class="create">
-    <input type="text" [(ngModel)]="name" class="create__input" placeholder="Name" maxlength="15">
-    <div class="head" appSelect [elClass]="'head__choice'" [toggleClass]="'outlined'" (click)="onHeadClick($event)">
+    <input type="text" [(ngModel)]="name" class="create__input" placeholder="Name" maxlength="15" #inputSection>
+    <div class="head" appSelect [elClass]="'head__choice'" [toggleClass]="'outlined'" (click)="onHeadClick($event)" #headSection>
         <div class="head__choice head__choice--1">
             <svg class="head__shape">
                 <use href="/assets/images/sprite.svg#head--1"></use>
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="body" appSelect [elClass]="'body__choice'" [toggleClass]="'outlined'" (click)="onBodyClick($event)">
+    <div class="body" appSelect [elClass]="'body__choice'" [toggleClass]="'outlined'" (click)="onBodyClick($event)" #bodySection>
         <div class="body__choice body__choice--1">
             <svg class="body__shape">
                 <use href="/assets/images/sprite.svg#body--1"></use>
@@ -63,7 +63,7 @@
         </div>
     </div>
     
-    <div class="color" appSelect [elClass]="'color__choice'" [toggleClass]="'outlined'" (click)="onColorClick($event)">
+    <div class="color" appSelect [elClass]="'color__choice'" [toggleClass]="'outlined'" (click)="onColorClick($event)" #colorSection>
         <div class="color__choice" [style.background-color]="'#eb4d4b'"></div>
         <div class="color__choice" [style.background-color]="'#f9ca24'"></div>
         <div class="color__choice" [style.background-color]="'#30336b'"></div>
