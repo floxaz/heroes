@@ -1,0 +1,36 @@
+:host {
+    border-radius: 1.5rem;
+    box-shadow: 0 0 2rem 0 #55efc4;
+}
+
+.hero {
+    background-color: #fff;
+    border-radius: 1.5rem;
+    padding: 4rem 0;
+    width: 20rem;
+
+    &__head {
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        margin: 0 auto;
+        transform: translateY(.6rem);
+    }
+
+    &__body {
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        margin: 0 auto;
+    }
+
+    &__name {
+        background-color: #789e72;
+        color: #fff;
+        margin: 2rem auto 0 auto;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 2rem 0;
+        width: 15rem;
+    }
+}

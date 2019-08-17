@@ -1,0 +1,11 @@
+<div class="hero">
+    <svg class="hero__head" [style.fill]="color">
+        <use [attr.href]="'/assets/images/sprite.svg#head--' + head"></use>
+    </svg>
+    <svg class="hero__body" [style.fill]="color">
+        <use [attr.href]="'/assets/images/sprite.svg#body--' + body"></use>
+    </svg>
+    <div class="hero__name">
+        {{ name }}
+    </div>
+</div>

@@ -1,3 +1,8 @@
-<div *ngFor="let hero of heroes">
-    <h3>{{ hero.name }}</h3>
-</div>
+<app-hero 
+*ngFor="let hero of heroes"
+[name]="hero.name"
+[head]="hero.head"
+[body]="hero.body"
+[color]="hero.color"
+>
+</app-hero>
