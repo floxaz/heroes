@@ -1,9 +1,18 @@
-<app-hero 
-*ngFor="let hero of heroes, let id = index"
-[name]="hero.name"
-[head]="hero.head"
-[body]="hero.body"
-[color]="hero.color"
-[id]="id"
->
+<div class="heroes-container" *ngIf="heroes.length > 0; else noHeroes" >
+    <app-hero
+    *ngFor="let hero of heroes, let id = index"
+    [name]="hero.name"
+    [head]="hero.head"
+    [body]="hero.body"
+    [color]="hero.color"
+    [id]="id"
+    >
 </app-hero>
+</div>
+<ng-template #noHeroes>
+    <div class="no-heroes">
+        <div class="no-heroes__message">
+            There is no heroes outhere..
+        </div>
+    </div>
+</ng-template>
