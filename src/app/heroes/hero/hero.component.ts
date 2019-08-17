@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { HeroesService } from '../heroes.service';
 
 @Component({
     selector: 'app-hero',
@@ -10,4 +11,11 @@ export class HeroComponent {
     @Input() head: string;
     @Input() body: string;
     @Input() color: string;
+    @Input() id: number;
+
+    constructor(private heroesService: HeroesService) {}
+
+    onDeleteClick() {
+        this.heroesService.removeHero(this.id);
+    }
 }

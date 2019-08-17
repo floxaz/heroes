@@ -1,8 +1,9 @@
 <app-hero 
-*ngFor="let hero of heroes"
+*ngFor="let hero of heroes, let id = index"
 [name]="hero.name"
 [head]="hero.head"
 [body]="hero.body"
 [color]="hero.color"
+[id]="id"
 >
 </app-hero>
