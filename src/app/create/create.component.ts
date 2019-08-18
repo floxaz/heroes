@@ -40,7 +40,7 @@ export class CreateComponent {
     
     cleanForm() {
         const removeOutline = (section: ElementRef) => {
-            const items = Array.from(section.nativeElement.children);
+            const items: HTMLElement[] = Array.from(section.nativeElement.children);
             items.forEach(item => {
                 if(item.classList.contains('outlined')) {
                     item.classList.remove('outlined');
